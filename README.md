@@ -1,4 +1,4 @@
-# Ornativa Concierge
+# jewelry-product-showcase
 
 Step 1. New Lovable project. Name it ornativa-concierge.
 
