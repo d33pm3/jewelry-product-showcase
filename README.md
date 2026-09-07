@@ -15,35 +15,29 @@ Neighbour repo: [ecommerce-business-webapp-chatbot](https://github.com/d33pm3/ec
 **This is not** official Ornativa or marketplace software.
 **This is not** the [ecommerce-business-webapp-chatbot](https://github.com/d33pm3/ecommerce-business-webapp-chatbot) prototype (separate catalogue + concierge).
 **This is not** a multi-agent runtime — `AGENTS.md` is Lovable editor notes.
-**This is not** a complete `src/` tree on `main` — the runnable source is in `Codebase.zip`.
+**This is** a self-contained repository with the runnable source tracked under `src/` and `public/`.
 
-## Where the source is
+## Demo data
 
-The **complete application source** is in [`Codebase.zip`](Codebase.zip), under:
-
-- `New folder/src/`
-- `New folder/public/`
-
-There is no runnable `src/` on `main`. Extract the zip before `npm run dev`.
+All catalogue items, prices, stock states, consultation details, and concierge responses are fictional demo fixtures. They must not be treated as real inventory, customer, or operational information.
 
 ## Run the eval build
 
-Requires Node.js 18+ and npm or Bun.
+Requires Bun 1.2.23.
 
 ```bash
 git clone https://github.com/d33pm3/jewelry-product-showcase.git
 cd jewelry-product-showcase
-unzip -o Codebase.zip
-cp -a "New folder/src/." src/
-cp -a "New folder/public/." public/
-npm i
-npm run dev
+bun install --frozen-lockfile
+bun run dev
 ```
 
-After extract, `src/routes/catalogue.tsx` must exist. If it does not, the zip did not unpack.
+Validate the same baseline used by CI:
 
 ```bash
-npm run build
+bun run lint
+bun run test
+bun run build
 ```
 
 ## What is not deployed
